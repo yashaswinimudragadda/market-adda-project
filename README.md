@@ -1,16 +1,46 @@
-# React + Vite
+# 🛒 Market Adda
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Market Adda** is a full-stack digital management portal designed to revolutionize how market storage units and street vendor operations are managed. By replacing traditional paper-based logging with a secure, real-time digital system, it ensures transparency and efficiency for both vendors and market administrators.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Key Features
 
-## React Compiler
+- **Digital Vendor Check-in:** Streamlined registration for vendors entering storage facilities.
+- **WhatsApp Integration:** Automatic delivery of digital receipts and tokens directly to the vendor's phone.
+- **Secure Token System:** A unique token-based check-out process to ensure inventory security.
+- **Real-time Dashboard:** Monitor daily revenue, active inventory, and storage occupancy at a glance.
+- **Financial Reporting:** Generate automated daily/monthly financial summaries in PDF format for audit and tracking.
+- **Safety Protocols:** Built-in validation to prevent the storage of prohibited items.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React.js, Tailwind CSS (or HeroUI/Bootstrap)
+- **Backend:** Java (Servlets & JDBC), MVC Architecture
+- **Database:** MySQL
+- **APIs:** WhatsApp Business API integration for notifications
+- **Reporting:** iText / JasperReports for PDF generation
+
+---
+
+## 📂 Project Structure
+
+```text
+market-adda-project/
+├── frontend/                # React.js Application
+│   ├── src/
+│   │   ├── components/      # Reusable UI (Forms, Tables, Cards)
+│   │   ├── pages/           # Dashboard, Check-in, Reports
+│   │   └── context/         # State management
+├── backend/                 # Java Web Application
+│   ├── src/main/java/
+│   │   ├── controller/      # Servlets handling requests
+│   │   ├── dao/             # Data Access Objects (MySQL Logic)
+│   │   └── model/           # Data Blueprints (Vendor, Token, User)
+│   └── webapp/              # JSP files and configuration
+└── database/                # SQL Schema and migration scripts
+
+
+git clone [https://github.com/yashaswinimudragadda/market-adda-project.git](https://github.com/yashaswinimudragadda/market-adda-project.git)
