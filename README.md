@@ -1,46 +1,72 @@
-# 🛒 Market Adda
+# Market Adda 🛒 | Full-Stack Vendor Management System
 
-**Market Adda** is a full-stack digital management portal designed to revolutionize how market storage units and street vendor operations are managed. By replacing traditional paper-based logging with a secure, real-time digital system, it ensures transparency and efficiency for both vendors and market administrators.
+**Market Adda** is a professional management portal designed to digitize and secure the storage operations of local market vendors. It replaces manual paper ledgers with a robust digital ecosystem, featuring real-time inventory tracking, automated WhatsApp receipts, and financial reporting.
 
 ---
 
-## 🌟 Key Features
+## 🚀 Key Features
 
-- **Digital Vendor Check-in:** Streamlined registration for vendors entering storage facilities.
-- **WhatsApp Integration:** Automatic delivery of digital receipts and tokens directly to the vendor's phone.
-- **Secure Token System:** A unique token-based check-out process to ensure inventory security.
-- **Real-time Dashboard:** Monitor daily revenue, active inventory, and storage occupancy at a glance.
-- **Financial Reporting:** Generate automated daily/monthly financial summaries in PDF format for audit and tracking.
-- **Safety Protocols:** Built-in validation to prevent the storage of prohibited items.
+* **Secure Authentication:** Branded login portal for authorized personnel.
+* **Live Storage Dashboard:** Real-time monitoring of cart inventory using React state synchronization.
+* **Digital Receipting:** Integration with **WhatsApp API** for paperless vendor confirmations.
+* **Financial Reporting:** Automated "Grand Total" calculations and **PDF exports** using jsPDF.
+* **Safety Compliance:** Dedicated module for prohibited items and facility safety rules.
+* **Optimized Backend:** Managed server lifecycle with **ServletContextListeners** to prevent memory leaks.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React.js, Tailwind CSS (or HeroUI/Bootstrap)
-- **Backend:** Java (Servlets & JDBC), MVC Architecture
-- **Database:** MySQL
-- **APIs:** WhatsApp Business API integration for notifications
-- **Reporting:** iText / JasperReports for PDF generation
+* **Frontend:** React.js, Bootstrap 5, GSAP (Animations), jsPDF.
+* **Backend:** Java (Jakarta EE), Servlets, JDBC, Google Gson.
+* **Database:** MySQL 8.0.
+* **Server:** Apache Tomcat 10.1.
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-market-adda-project/
-├── frontend/                # React.js Application
+MarketAdda/
+├── frontend/ (React.js)
 │   ├── src/
-│   │   ├── components/      # Reusable UI (Forms, Tables, Cards)
-│   │   ├── pages/           # Dashboard, Check-in, Reports
-│   │   └── context/         # State management
-├── backend/                 # Java Web Application
-│   ├── src/main/java/
-│   │   ├── controller/      # Servlets handling requests
-│   │   ├── dao/             # Data Access Objects (MySQL Logic)
-│   │   └── model/           # Data Blueprints (Vendor, Token, User)
-│   └── webapp/              # JSP files and configuration
-└── database/                # SQL Schema and migration scripts
+│   │   ├── components/
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── NewEntry.jsx
+│   │   │   ├── LiveStorage.jsx
+│   │   │   ├── DailyReports.jsx
+│   │   │   └── SafetyRules.jsx
+│   │   ├── App.jsx
+│   │   └── App.css
+│   └── package.json
+│
+├── backend/ (Java Servlet API)
+│   ├── src/main/java/com/example/
+│   │   ├── controller/
+│   │   │   ├── VendorServlet.java       (API Endpoints)
+│   │   │   └── MyAppContextListener.java (Lifecycle Management)
+│   │   └── model/
+│   │       └── Vendor.java              (Data Model/POJO)
+│   └── webapp/WEB-INF/lib/              (MySQL Connector, Gson jars)
+└── README.md
 
 
-git clone [https://github.com/yashaswinimudragadda/market-adda-project.git](https://github.com/yashaswinimudragadda/market-adda-project.git)
+
+* SQL table
+CREATE DATABASE reactproject;
+USE reactproject;
+
+CREATE TABLE vendors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    token INT NOT NULL UNIQUE,
+    phonenumber BIGINT NOT NULL,
+    items TEXT,
+    amount_paid INT NOT NULL,
+    status VARCHAR(50) DEFAULT 'Stored',
+    entry_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Example Insert
+INSERT INTO vendors (name, token, phonenumber, items, amount_paid)
+VALUES ('Sample Vendor', 101, 9876543210, 'Fruit Cart', 50);
