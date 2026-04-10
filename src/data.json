@@ -1,0 +1,96 @@
+{
+  "lastUpdated": "2026-04-05",
+  "totalRecords": 10,
+  "storageData": [
+    {
+      "id": "MA-1001",
+      "name": "Ramu K.",
+      "phone": "9848012345",
+      "inventory": { "item": "Flower Baskets", "quantity": 2 },
+      "status": "Stored",
+      "token": 1001,
+      "amountPaid": 50
+    },
+    {
+      "id": "MA-1002",
+      "name": "Laxmi Devi",
+      "phone": "9000011111",
+      "inventory": { "item": "Vegetable Sacks", "quantity": 3 },
+      "status": "Stored",
+      "token": 1002,
+      "amountPaid": 30
+    },
+    {
+      "id": "MA-1003",
+      "name": "Srinivas",
+      "phone": "9123456789",
+      "inventory": { "item": "Iron Scale", "quantity": 1 },
+      "status": "Stored",
+      "token": 1003,
+      "amountPaid": 100
+    },
+    {
+      "id": "MA-1004",
+      "name": "Anitha",
+      "phone": "8885522334",
+      "inventory": { "item": "Fruit Boxes", "quantity": 5 },
+      "status": "Stored",
+      "token": 1004,
+      "amountPaid": 75
+    },
+    {
+      "id": "MA-1005",
+      "name": "Venkatesh",
+      "phone": "9949012345",
+      "inventory": { "item": "Empty Crates", "quantity": 10 },
+      "status": "Stored",
+      "token": 1005,
+      "amountPaid": 40
+    },
+    {
+      "id": "MA-1006",
+      "name": "Priya",
+      "phone": "7702011223",
+      "inventory": { "item": "Push Cart", "quantity": 1 },
+      "status": "Stored",
+      "token": 1006,
+      "amountPaid": 150
+    },
+    {
+      "id": "MA-1007",
+      "name": "Babu",
+      "phone": "9440055667",
+      "inventory": { "item": "Sack Ginger", "quantity": 4 },
+      "status": "Stored",
+      "token": 1007,
+      "amountPaid": 60
+    },
+    {
+      "id": "MA-1008",
+      "name": "Kavitha",
+      "phone": "8121099887",
+      "inventory": { "item": "Basket Chillies", "quantity": 2 },
+      "status": "Stored",
+      "token": 1008,
+      "amountPaid": 20
+    },
+    {
+      "id": "MA-1009",
+      "name": "Rajesh Kumar",
+      "phone": "9550011223",
+      "inventory": { "item": "Onion Bags", "quantity": 12 },
+      "status": "Stored",
+      "token": 1009,
+      "amountPaid": 85
+    },
+    {
+      "id": "MA-1010",
+      "name": "Sunitha W.",
+      "phone": "9667788990",
+      "inventory": { "item": "Plastic Crates", "quantity": 6 },
+      "status": "Stored",
+      "token": 1010,
+      "amountPaid": 45
+    }
+  ]
+}
